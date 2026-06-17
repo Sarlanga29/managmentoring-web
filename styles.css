@@ -47,7 +47,7 @@ input {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   align-items: center;
   gap: 28px;
   min-height: 76px;
@@ -77,6 +77,34 @@ input {
 
 .top-nav a:hover {
   color: var(--ink);
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.language-switcher button {
+  min-width: 38px;
+  min-height: 34px;
+  padding: 6px 9px;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.language-switcher button:hover,
+.language-switcher button.active {
+  background: var(--moss);
+  color: var(--white);
 }
 
 .hero {
@@ -182,6 +210,7 @@ h3 {
   font-weight: 800;
   text-decoration: none;
   cursor: pointer;
+  overflow-wrap: anywhere;
 }
 
 .primary-button {
@@ -622,7 +651,7 @@ footer {
 
 @media (max-width: 980px) {
   .site-header {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
   }
 
   .top-nav {
@@ -656,12 +685,19 @@ footer {
 
 @media (max-width: 680px) {
   .site-header {
+    grid-template-columns: 1fr auto;
     min-height: 68px;
     gap: 12px;
   }
 
   .brand img {
     width: min(210px, 54vw);
+  }
+
+  .language-switcher {
+    order: 3;
+    grid-column: 1 / -1;
+    justify-self: start;
   }
 
   .ghost-button {
@@ -674,11 +710,15 @@ footer {
   }
 
   h1 {
-    font-size: clamp(2.65rem, 11vw, 3rem);
+    font-size: clamp(2.2rem, 10.5vw, 3rem);
   }
 
   .hero-copy {
     font-size: 1rem;
+  }
+
+  .hero .eyebrow {
+    max-width: 260px;
   }
 
   .hero-actions {
@@ -687,8 +727,15 @@ footer {
     max-width: 260px;
   }
 
+  .contact-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
   .hero-actions .primary-button,
-  .hero-actions .secondary-button {
+  .hero-actions .secondary-button,
+  .contact-actions .primary-button,
+  .contact-actions .secondary-button {
     width: 100%;
     text-align: center;
   }
@@ -713,5 +760,34 @@ footer {
   .table-header {
     align-items: stretch;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-header {
+    padding-inline: 14px;
+  }
+
+  .brand img {
+    width: 178px;
+  }
+
+  .site-header > .ghost-button {
+    min-height: 40px;
+    padding: 9px 10px;
+    font-size: 0.92rem;
+  }
+
+  h1 {
+    font-size: 2.12rem;
+  }
+
+  .hero .eyebrow {
+    max-width: 220px;
+    font-size: 0.68rem;
+  }
+
+  .hero-actions {
+    max-width: 100%;
   }
 }

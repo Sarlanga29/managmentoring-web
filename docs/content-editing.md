@@ -16,6 +16,26 @@ Cambios comunes:
 - WhatsApp: buscar `https://wa.me/59899335900`.
 - Email: buscar `lourdespose@managmentoring.com`.
 
+## Idiomas
+
+Archivo: `app.js`
+
+Las traducciones estan en el objeto `translations`:
+
+- `es`: espanol.
+- `pt`: portugues.
+- `en`: ingles.
+
+El selector del sitio usa la convencion `ES`, `PT`, `EN` y tambien permite compartir URLs como:
+
+```text
+?lang=es
+?lang=pt
+?lang=en
+```
+
+Cuando agregues o cambies un texto visible, conviene agregarlo en los tres idiomas.
+
 ## Colores y look
 
 Archivo: `styles.css`

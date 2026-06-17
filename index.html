@@ -14,20 +14,28 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="alternate" hreflang="es" href="?lang=es" />
+    <link rel="alternate" hreflang="pt" href="?lang=pt" />
+    <link rel="alternate" hreflang="en" href="?lang=en" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="Managmentoring inicio">
+      <a class="brand" href="#inicio" aria-label="Managmentoring inicio" data-i18n-attr="aria-label:brandAria">
         <img src="assets/managmentoring-logo.png" alt="Managmentoring" />
       </a>
-      <nav class="top-nav" aria-label="Navegacion principal">
-        <a href="#programas">Programas</a>
-        <a href="#metodo">Metodo</a>
+      <nav class="top-nav" aria-label="Navegacion principal" data-i18n-attr="aria-label:navAria">
+        <a href="#programas" data-i18n="navPrograms">Programas</a>
+        <a href="#metodo" data-i18n="navMethod">Metodo</a>
         <a href="#lourdes">Lourdes</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#contacto" data-i18n="navContact">Contacto</a>
       </nav>
-      <button class="ghost-button" type="button" data-open-login>Acceso privado</button>
+      <div class="language-switcher" aria-label="Idioma" data-i18n-attr="aria-label:languageAria">
+        <button type="button" data-lang="es">ES</button>
+        <button type="button" data-lang="pt">PT</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <button class="ghost-button" type="button" data-open-login data-i18n="privateAccess">Acceso privado</button>
     </header>
 
     <main>
@@ -36,32 +44,32 @@
           <img src="assets/hero-desk.jpeg" alt="" />
         </div>
         <div class="hero-content">
-          <p class="eyebrow">Mentoria personal y corporativa</p>
+          <p class="eyebrow" data-i18n="heroEyebrow">Mentoria personal y corporativa</p>
           <h1>Managmentoring</h1>
-          <p class="hero-copy">
+          <p class="hero-copy" data-i18n="heroCopy">
             Un espacio de acompanamiento estrategico para ordenar objetivos,
             fortalecer liderazgo y avanzar con un plan claro hacia tu excelencia.
           </p>
           <div class="hero-actions">
-            <a class="primary-button" href="https://wa.me/59899335900" target="_blank" rel="noreferrer">
+            <a class="primary-button" href="https://wa.me/59899335900" target="_blank" rel="noreferrer" data-i18n="heroCta">
               Agendar conversacion
             </a>
-            <a class="secondary-button" href="#programas">Ver programas</a>
+            <a class="secondary-button" href="#programas" data-i18n="heroSecondary">Ver programas</a>
           </div>
         </div>
-        <aside class="hero-panel" aria-label="Resumen del programa">
-          <span>Programa destacado</span>
-          <strong>10 escalones para llegar a tu excelencia</strong>
-          <p>10 sesiones personalizadas, online y presenciales, con objetivos, herramientas y seguimiento.</p>
+        <aside class="hero-panel" aria-label="Resumen del programa" data-i18n-attr="aria-label:programSummaryAria">
+          <span data-i18n="featuredProgram">Programa destacado</span>
+          <strong data-i18n="tenStepsTitle">10 escalones para llegar a tu excelencia</strong>
+          <p data-i18n="heroPanelCopy">10 sesiones personalizadas, online y presenciales, con objetivos, herramientas y seguimiento.</p>
         </aside>
       </section>
 
       <section class="section intro-grid" id="programas">
         <div>
-          <p class="eyebrow">Que hacemos</p>
-          <h2>Mentorias que convierten intencion en accion.</h2>
+          <p class="eyebrow" data-i18n="whatWeDo">Que hacemos</p>
+          <h2 data-i18n="introTitle">Mentorias que convierten intencion en accion.</h2>
         </div>
-        <p>
+        <p data-i18n="introCopy">
           Managmentoring acompana a personas y empresas a definir proposito,
           superar bloqueos, mejorar comunicacion y disenar planes de accion
           realistas. La experiencia privada permite que cada participante vea
@@ -72,79 +80,79 @@
       <section class="programs">
         <article class="program-card">
           <span>01</span>
-          <h3>10 escalones</h3>
-          <p>Proceso individual de 10 sesiones para foco, equilibrio, gestion personal y decisiones alineadas.</p>
+          <h3 data-i18n="programOneTitle">10 escalones</h3>
+          <p data-i18n="programOneCopy">Proceso individual de 10 sesiones para foco, equilibrio, gestion personal y decisiones alineadas.</p>
           <ul>
-            <li>Objetivos personales y profesionales</li>
-            <li>Plan de accion semanal</li>
-            <li>Materiales asignados por persona</li>
+            <li data-i18n="programOneBulletOne">Objetivos personales y profesionales</li>
+            <li data-i18n="programOneBulletTwo">Plan de accion semanal</li>
+            <li data-i18n="programOneBulletThree">Materiales asignados por persona</li>
           </ul>
         </article>
         <article class="program-card">
           <span>02</span>
-          <h3>Empresas y mandos medios</h3>
-          <p>Programa corporativo para alinear roles, motivar equipos y mejorar comunicacion interna.</p>
+          <h3 data-i18n="programTwoTitle">Empresas y mandos medios</h3>
+          <p data-i18n="programTwoCopy">Programa corporativo para alinear roles, motivar equipos y mejorar comunicacion interna.</p>
           <ul>
-            <li>Sesiones individuales y grupales</li>
-            <li>Diagnostico de necesidades</li>
-            <li>Seguimiento por equipo</li>
+            <li data-i18n="programTwoBulletOne">Sesiones individuales y grupales</li>
+            <li data-i18n="programTwoBulletTwo">Diagnostico de necesidades</li>
+            <li data-i18n="programTwoBulletThree">Seguimiento por equipo</li>
           </ul>
         </article>
         <article class="program-card">
           <span>03</span>
           <h3>AgroMENTORING</h3>
-          <p>Acompanamiento para profesionales y organizaciones del agro, combinando gestion, liderazgo y criterio tecnico.</p>
+          <p data-i18n="programThreeCopy">Acompanamiento para profesionales y organizaciones del agro, combinando gestion, liderazgo y criterio tecnico.</p>
           <ul>
-            <li>Gestion de operaciones</li>
-            <li>Liderazgo en campo</li>
-            <li>Procesos de cambio</li>
+            <li data-i18n="programThreeBulletOne">Gestion de operaciones</li>
+            <li data-i18n="programThreeBulletTwo">Liderazgo en campo</li>
+            <li data-i18n="programThreeBulletThree">Procesos de cambio</li>
           </ul>
         </article>
       </section>
 
       <section class="section method" id="metodo">
         <div class="method-copy">
-          <p class="eyebrow">Metodo</p>
-          <h2>Claridad, herramientas y seguimiento.</h2>
-          <p>
+          <p class="eyebrow" data-i18n="methodEyebrow">Metodo</p>
+          <h2 data-i18n="methodTitle">Claridad, herramientas y seguimiento.</h2>
+          <p data-i18n="methodCopy">
             Cada proceso comienza con una lectura honesta del momento actual,
             traduce esa lectura en objetivos concretos y avanza con tareas,
             materiales y conversaciones que quedan registradas.
           </p>
         </div>
-        <div class="steps" aria-label="Etapas de trabajo">
-          <div><strong>Diagnostico</strong><span>Entender contexto, energia, objetivos y obstaculos.</span></div>
-          <div><strong>Diseno</strong><span>Crear una ruta de trabajo personalizada.</span></div>
-          <div><strong>Accion</strong><span>Sesiones, ejercicios, decisiones y compromisos.</span></div>
-          <div><strong>Seguimiento</strong><span>Medir avances y ajustar el plan.</span></div>
+        <div class="steps" aria-label="Etapas de trabajo" data-i18n-attr="aria-label:stepsAria">
+          <div><strong data-i18n="stepOneTitle">Diagnostico</strong><span data-i18n="stepOneCopy">Entender contexto, energia, objetivos y obstaculos.</span></div>
+          <div><strong data-i18n="stepTwoTitle">Diseno</strong><span data-i18n="stepTwoCopy">Crear una ruta de trabajo personalizada.</span></div>
+          <div><strong data-i18n="stepThreeTitle">Accion</strong><span data-i18n="stepThreeCopy">Sesiones, ejercicios, decisiones y compromisos.</span></div>
+          <div><strong data-i18n="stepFourTitle">Seguimiento</strong><span data-i18n="stepFourCopy">Medir avances y ajustar el plan.</span></div>
         </div>
       </section>
 
       <section class="section founder" id="lourdes">
         <div class="founder-photo">
-          <img src="assets/hero-desk.jpeg" alt="Espacio de trabajo de Managmentoring" />
+          <img src="assets/hero-desk.jpeg" alt="Espacio de trabajo de Managmentoring" data-i18n-attr="alt:founderImageAlt" />
         </div>
         <div>
-          <p class="eyebrow">Quien esta detras</p>
+          <p class="eyebrow" data-i18n="founderEyebrow">Quien esta detras</p>
           <h2>Lourdes Pose</h2>
-          <p>
+          <p data-i18n="founderCopy">
             Ingeniera agronoma y MBA, con experiencia productiva, corporativa y consultiva.
             Managmentoring nace desde valores de honestidad, respeto, generosidad,
             autenticidad y coherencia.
           </p>
           <div class="founder-stats">
-            <div><strong>10</strong><span>sesiones por programa</span></div>
-            <div><strong>1:1</strong><span>acompanamiento cercano</span></div>
-            <div><strong>360</strong><span>mirada personal y profesional</span></div>
+            <div><strong>10</strong><span data-i18n="statOne">sesiones por programa</span></div>
+            <div><strong>1:1</strong><span data-i18n="statTwo">acompanamiento cercano</span></div>
+            <div><strong>360</strong><span data-i18n="statThree">mirada personal y profesional</span></div>
           </div>
         </div>
       </section>
 
       <section class="private-preview" id="privado">
         <div>
-          <p class="eyebrow">Nueva area privada</p>
-          <h2>Un portal para participantes y un backoffice para Lourdes.</h2>
-          <p>
+          <p class="eyebrow" data-i18n="privateEyebrow">Nueva area privada</p>
+          <h2 data-i18n="privateTitle">Un portal para participantes y un backoffice para Lourdes.</h2>
+          <p data-i18n="privateCopy">
             La propuesta incluye acceso por perfil: cada cliente ve sus cursos,
             sesiones y materiales; Lourdes accede a una base completa con estado,
             notas, pagos, proximas sesiones y asignacion de contenidos.
@@ -152,12 +160,12 @@
         </div>
         <div class="preview-grid">
           <button class="preview-tile" type="button" data-login-as="client">
-            <strong>Portal del participante</strong>
-            <span>Cursos personalizados, progreso y proximas tareas.</span>
+            <strong data-i18n="participantPortal">Portal del participante</strong>
+            <span data-i18n="participantPortalCopy">Cursos personalizados, progreso y proximas tareas.</span>
           </button>
           <button class="preview-tile" type="button" data-login-as="admin">
-            <strong>Panel de Lourdes</strong>
-            <span>Clientes, programas, notas y gestion comercial.</span>
+            <strong data-i18n="lourdesPanel">Panel de Lourdes</strong>
+            <span data-i18n="lourdesPanelCopy">Clientes, programas, notas y gestion comercial.</span>
           </button>
         </div>
       </section>
@@ -169,44 +177,44 @@
             <h2 id="portalTitle">Area privada</h2>
           </div>
           <div class="portal-actions">
-            <button class="secondary-button small" type="button" data-login-as="client">Ver como cliente</button>
-            <button class="secondary-button small" type="button" data-login-as="admin">Ver como Lourdes</button>
-            <button class="ghost-button small" type="button" data-logout>Salir</button>
+            <button class="secondary-button small" type="button" data-login-as="client" data-i18n="viewAsClient">Ver como cliente</button>
+            <button class="secondary-button small" type="button" data-login-as="admin" data-i18n="viewAsAdmin">Ver como Lourdes</button>
+            <button class="ghost-button small" type="button" data-logout data-i18n="logout">Salir</button>
           </div>
         </div>
 
         <div class="client-dashboard" data-view="client">
           <section class="dashboard-card course-focus">
-            <span class="status-pill">Semana 4 de 10</span>
-            <h3>10 escalones para llegar a tu excelencia</h3>
-            <p>Proximo foco: fortalecer prioridades, delegar con criterio y cerrar compromisos de la semana.</p>
+            <span class="status-pill" data-i18n="clientWeek">Semana 4 de 10</span>
+            <h3 data-i18n="tenStepsTitle">10 escalones para llegar a tu excelencia</h3>
+            <p data-i18n="clientFocus">Proximo foco: fortalecer prioridades, delegar con criterio y cerrar compromisos de la semana.</p>
             <div class="progress-track"><span style="width: 42%"></span></div>
           </section>
           <section class="dashboard-card">
-            <h3>Mis materiales</h3>
-            <div class="resource-row"><strong>Mapa de objetivos</strong><span>PDF</span></div>
-            <div class="resource-row"><strong>Ejercicio de fortalezas</strong><span>Video</span></div>
-            <div class="resource-row"><strong>Plan semanal</strong><span>Doc</span></div>
+            <h3 data-i18n="myMaterials">Mis materiales</h3>
+            <div class="resource-row"><strong data-i18n="materialOne">Mapa de objetivos</strong><span>PDF</span></div>
+            <div class="resource-row"><strong data-i18n="materialTwo">Ejercicio de fortalezas</strong><span data-i18n="videoLabel">Video</span></div>
+            <div class="resource-row"><strong data-i18n="materialThree">Plan semanal</strong><span>Doc</span></div>
           </section>
           <section class="dashboard-card">
-            <h3>Proxima sesion</h3>
-            <p class="large-date">Jueves 18:30</p>
-            <p>Sesion online. Tema: gestion de energia y conversaciones pendientes.</p>
+            <h3 data-i18n="nextSession">Proxima sesion</h3>
+            <p class="large-date" data-i18n="nextSessionDate">Jueves 18:30</p>
+            <p data-i18n="nextSessionCopy">Sesion online. Tema: gestion de energia y conversaciones pendientes.</p>
           </section>
         </div>
 
         <div class="admin-dashboard hidden" data-view="admin">
           <div class="metric-row">
-            <div><strong>38</strong><span>clientes totales</span></div>
-            <div><strong>12</strong><span>programas activos</span></div>
-            <div><strong>7</strong><span>sesiones esta semana</span></div>
-            <div><strong>4</strong><span>seguimientos pendientes</span></div>
+            <div><strong>38</strong><span data-i18n="metricClients">clientes totales</span></div>
+            <div><strong>12</strong><span data-i18n="metricPrograms">programas activos</span></div>
+            <div><strong>7</strong><span data-i18n="metricSessions">sesiones esta semana</span></div>
+            <div><strong>4</strong><span data-i18n="metricFollowUps">seguimientos pendientes</span></div>
           </div>
           <section class="admin-layout">
             <div class="dashboard-card">
               <div class="table-header">
-                <h3>Base de clientes</h3>
-                <input id="clientSearch" type="search" placeholder="Buscar cliente, empresa o estado" />
+                <h3 data-i18n="clientBase">Base de clientes</h3>
+                <input id="clientSearch" type="search" placeholder="Buscar cliente, empresa o estado" data-i18n-attr="placeholder:clientSearchPlaceholder" />
               </div>
               <div class="client-table" id="clientTable"></div>
             </div>
@@ -217,11 +225,11 @@
 
       <section class="section contact" id="contacto">
         <div>
-          <p class="eyebrow">Contacto</p>
-          <h2>Contanos donde estas y armamos el camino.</h2>
+          <p class="eyebrow" data-i18n="contactEyebrow">Contacto</p>
+          <h2 data-i18n="contactTitle">Contanos donde estas y armamos el camino.</h2>
         </div>
         <div class="contact-actions">
-          <a class="primary-button" href="https://wa.me/59899335900" target="_blank" rel="noreferrer">Enviar WhatsApp</a>
+          <a class="primary-button" href="https://wa.me/59899335900" target="_blank" rel="noreferrer" data-i18n="sendWhatsapp">Enviar WhatsApp</a>
           <a class="secondary-button" href="mailto:lourdespose@managmentoring.com">lourdespose@managmentoring.com</a>
         </div>
       </section>
@@ -237,15 +245,15 @@
       <form method="dialog">
         <button class="close-button" type="submit" aria-label="Cerrar">x</button>
       </form>
-      <p class="eyebrow">Acceso demo</p>
-      <h2>Elegir perfil</h2>
-      <p>
+      <p class="eyebrow" data-i18n="demoAccess">Acceso demo</p>
+      <h2 data-i18n="chooseProfile">Elegir perfil</h2>
+      <p data-i18n="demoCopy">
         Esta maqueta muestra la experiencia privada. En produccion se conectaria
         a usuarios reales, permisos y base de datos.
       </p>
       <div class="dialog-actions">
-        <button class="primary-button" type="button" data-login-as="client">Entrar como cliente</button>
-        <button class="secondary-button" type="button" data-login-as="admin">Entrar como Lourdes</button>
+        <button class="primary-button" type="button" data-login-as="client" data-i18n="enterAsClient">Entrar como cliente</button>
+        <button class="secondary-button" type="button" data-login-as="admin" data-i18n="enterAsAdmin">Entrar como Lourdes</button>
       </div>
     </dialog>
 
