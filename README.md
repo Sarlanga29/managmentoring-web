@@ -12,6 +12,7 @@ Redisenio inicial del sitio de Managmentoring y base de plan para llevarlo a pro
 - Plan de produccion en `docs/production-plan.md`.
 - Guia de control y propiedad en `docs/ownership-control.md`.
 - Guia para editar contenido en `docs/content-editing.md`.
+- Guia de trabajo local como developer en `docs/local-developer-workflow.md`.
 
 ## Como abrir localmente
 
